@@ -1,0 +1,27 @@
+.navbar {
+    background-color: black;
+    display: flex;
+    padding: 20px;
+}
+
+.logo {
+    color: white;
+    margin-right: auto;
+    font-size: 22px;
+}
+
+.menu-nav {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.menu-nav>a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-nav>a:hover{
+    color: orange;
+}
