@@ -4,6 +4,8 @@ import Home from './components/Home'
 import About from './components/About';
 import Blogs from './components/Blogs';
 import Navbar from './components/Navbar';
+import NotFound from './components/NotFound';
+import blogs from './data/blogs.js';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 function App() {
@@ -16,7 +18,8 @@ function App() {
         <Routes>
           <Route path='/' element={<Home></Home>} />
           <Route path='/about' element={<About></About>} />
-          <Route path='/blogs' element={<Blogs></Blogs>} />
+          <Route path='/blogs' element={<Blogs blogs={blogs}></Blogs>} />
+          <Route path='*' element={<NotFound></NotFound>} />
         </Routes>
       </Router>
     </>

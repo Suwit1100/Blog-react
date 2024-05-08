@@ -1,9 +1,22 @@
 import React from 'react'
-
-function Blogs() {
+import '../css/Blogs.css'
+function Blogs(props) {
+    const { blogs } = props;
     return (
-        <div>
-            <h2>Blogs</h2>
+        <div className="blogs-container">
+            <article>
+                {blogs.map((item) => {
+                    return (
+                        <>
+                            <div className="card" key={item.id}>
+                                <h2>{item.title}</h2>
+                                <p>{item.content.substring(0, 300)}</p>
+                            </div>
+                            <hr />
+                        </>
+                    );
+                })}
+            </article>
         </div>
     )
 }

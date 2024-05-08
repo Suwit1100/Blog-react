@@ -6,3 +6,20 @@ body {
   box-sizing: border-box;
   font-family: "Noto Sans Thai", sans-serif;
 }
+
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title{
+  color: #333;
+  text-align: center;
+}
+
+.imgtitle{
+  width: 550px;
+  height: 500px;
+}
