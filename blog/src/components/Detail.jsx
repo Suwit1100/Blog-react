@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import blogs from '../data/blogs';
+import '../css/Detail.css'
 
 function Detail() {
     const { id } = useParams();
@@ -18,8 +19,13 @@ function Detail() {
         setAuthor(result.author);
     }, [])
     return (
-        <div>
-            บทความที่ {id}
+        <div className="container">
+            <h2 className="title">บทความ : {title}</h2>
+            <img src={image} alt={title} className='blog-img'/>
+            <div className="blog-detail">
+                <strong>ผู้เขียน : {author} </strong>
+                <p>{content}</p>
+            </div>
         </div>
     )
 }

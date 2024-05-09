@@ -5,6 +5,21 @@ function Blogs(props) {
     const { blogs } = props;
     return (
         <div className="blogs-container">
+            <div className="search-container">
+                <input type="text" />
+            </div>
+            <div className="result-search">
+                <div className="item">
+                    <img src="" alt="" width={50} height={50} />
+                    <span>adasda</span>
+                </div>
+                <hr />
+                <div className="item">
+                    <img src="" alt="" width={50} height={50} />
+                    <span>adasda</span>
+                    <hr />
+                </div>
+            </div>
             <article>
                 {blogs.map((item) => {
                     return (
@@ -15,7 +30,8 @@ function Blogs(props) {
                                     <p>{item.content.substring(0, 300)}</p>
                                 </div>
                             </Link>
-                            <hr /></>
+                            <hr />
+                        </>
                     );
                 })}
             </article>
