@@ -1,5 +1,6 @@
 import React from 'react'
 import '../css/Blogs.css'
+import { Link } from 'react-router-dom';
 function Blogs(props) {
     const { blogs } = props;
     return (
@@ -8,12 +9,13 @@ function Blogs(props) {
                 {blogs.map((item) => {
                     return (
                         <>
-                            <div className="card" key={item.id}>
-                                <h2>{item.title}</h2>
-                                <p>{item.content.substring(0, 300)}</p>
-                            </div>
-                            <hr />
-                        </>
+                            <Link to={`/blog/${item.id}`} key={item.id}>
+                                <div className="card" >
+                                    <h2>{item.title}</h2>
+                                    <p>{item.content.substring(0, 300)}</p>
+                                </div>
+                            </Link>
+                            <hr /></>
                     );
                 })}
             </article>
