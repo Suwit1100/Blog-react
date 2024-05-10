@@ -40,15 +40,22 @@ a {
     gap: 10px;
 }
 
+.item:hover {
+    background-color: black;
+    color: orange;
+}
+
 .item>img {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 10px !important;
 }
 
-
-
 hr {
     margin-top: 0px;
     margin-bottom: 0px;
+}
+
+.notfound{
+    padding: 15px;
 }
